@@ -15,8 +15,7 @@ function Div(el)
     print(el.classes)
     if quarto.doc.is_format("html") then
       el.classes[1] = 'panel-tabset'
-      print(el.classes)
-      return el
+      return quarto.Tab(pandoc.Div('Test'), pandoc.Span('Title'))
       -- return pandoc.SmallCaps(el.content)
     else 
       return nil
