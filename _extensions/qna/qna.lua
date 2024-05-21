@@ -16,8 +16,6 @@ function Div(el)
     print(el.classes[1])
     print(pandoc.utils.stringify(el.content[1]))
     return pandoc.SmallCaps(pandoc.utils.stringify(el.content[1]))
-  else
-    return el
   end
 end
 
