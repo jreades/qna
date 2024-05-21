@@ -11,10 +11,14 @@ local function tabset(node)
 end
 
 function Div(el)
-  -- quarto.log.output(el)
-  print(el.classes[1])
-  print(pandoc.utils.stringify(el.content[1]))
-  return pandoc.SmallCaps(pandoc.utils.stringify(el.content))
+  if el.classes ~= nil and el.classes[1] == "qna" then
+    quarto.log.output(el)
+    print(el.classes[1])
+    print(pandoc.utils.stringify(el.content[1]))
+    return pandoc.SmallCaps(pandoc.utils.stringify(el.content[1]))
+  else
+    return el
+  end
 end
 
 -- function Div(div)

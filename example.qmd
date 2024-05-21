@@ -4,8 +4,8 @@ format:
    html: default
    #pdf: default
 filters:
-  - quarto
   - qna
+  - quarto
 ---
 
 ### Some Header
@@ -18,7 +18,7 @@ Test content
 
 :::
 
-::: {.panel-tabset}
+::: {.qna}
 
 #### Question
 
