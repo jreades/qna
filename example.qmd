@@ -1,0 +1,31 @@
+---
+title: "Q&A Example"
+format:
+   html: default
+   #pdf: default
+filters:
+  - quarto
+  - qna
+---
+
+### Some Header
+
+This filter changes the output of a panel into a Q&A format: so you can specify what element is/elements are included based on the output format chosen.
+
+::: {.test}
+
+Test content
+
+:::
+
+::: {.panel-tabset}
+
+#### Question
+
+This is a question.
+
+#### Answer
+
+This is the answer
+
+:::
