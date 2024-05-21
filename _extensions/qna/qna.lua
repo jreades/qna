@@ -11,11 +11,16 @@ local function tabset(node)
 end
 
 function Div(el)
-  if el.classes ~= nil and el.classes[1] == "qna" then
-    quarto.log.output(el)
-    print(el.classes[1])
-    print(pandoc.utils.stringify(el.content[1]))
-    return pandoc.SmallCaps(pandoc.utils.stringify(el.content[1]))
+  if el.classes:includes"qna" then
+    print(el.classes)
+    if quarto.doc.is_format("html") then
+      el.classes[1] = 'panel-tabset'
+      print(el.classes)
+      return el
+      -- return pandoc.SmallCaps(el.content)
+    else 
+      return nil
+    end
   end
 end
 
