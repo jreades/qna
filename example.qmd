@@ -26,32 +26,39 @@ Test content
 
 #### Question
 
+How do you print out the last element of this list?
+
 ```python
+l = range(1,5)
 print(l[???])
 ```
 
-#### Answer
+And [a link](https://jreades.github.io/). 
 
-```python
-print(l[-1])
-```
+Or an ordered list:
 
-:::
-
-### Option 2
-
-::: {.qna .panel-tabset}
-
-#### Question
-
-```python
-print(l[???])
-```
+1. Item 1
+2. Item 2
+3. Item 3
 
 #### Answer
 
-```python
+Some *other* formatting:
+
+- Such
+- as
+- a 
+- list
+
+##### Sub-headers are supported
+
+```{python}
+l = range(1,5)
 print(l[-1])
 ```
+
+<div style="font-weight:bold;">So it's about using negative indexing.</div>
+
+**Or something.**
 
 :::
