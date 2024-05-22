@@ -1,3 +1,5 @@
 *.html
 *.pdf
+*.code-workspace
 *_files/
+/.luarc.json

@@ -8,9 +8,11 @@ filters:
   - quarto
 ---
 
-### Some Header
+This filter changes the output from a panel depending on the output format: 
 
-This filter changes the output of a panel into a Q&A format: so you can specify what element is/elements are included based on the output format chosen.
+- Rendering to `.ipynb` you will see the question code.
+- Rendering to `.pdf` you will see the answer.
+- Rendering to `.html` you will see both.
 
 ::: {.test}
 
@@ -18,14 +20,38 @@ Test content
 
 :::
 
+### Option 1
+
 ::: {.qna}
 
 #### Question
 
-This is a question.
+```python
+print(l[???])
+```
 
 #### Answer
 
-This is the answer
+```python
+print(l[-1])
+```
+
+:::
+
+### Option 2
+
+::: {.qna .panel-tabset}
+
+#### Question
+
+```python
+print(l[???])
+```
+
+#### Answer
+
+```python
+print(l[-1])
+```
 
 :::
