@@ -23,7 +23,10 @@ function Div(div)
         print('^^^^')
       end,
       RawBlock = function(r)
-        return {}
+        return
+      end,
+      BlockQuote = function(bl)
+        return
       end,
       Table = function(tbl)
         resource_attr = pandoc.Attr('', {'cell-output','cell-output-display'}, {})
@@ -42,7 +45,7 @@ function Div(div)
         -- print(code.attr)
         -- print(code.text)
         local resource_attr = pandoc.Attr('', {'cell','code'}, {})
-        print(code.classes)
+        -- print(code.classes)
         if not code.classes:includes('code') then 
           code.classes:insert('code')
           code.classes:insert('cell')
@@ -51,7 +54,12 @@ function Div(div)
         table.insert(raw[div_num].content, code) -- pandoc.Div(code, resource_attr))
       end,
       Para = function(para)
+        -- print("-----")
+        -- print(raw)
+        -- print(para)
+        -- print("-----")
         table.insert(raw[div_num].content, para)
+        -- table.insert(raw[#raw].content, para)
       end,
       BulletList = function(bl)
         table.insert(raw[div_num].content, bl)
