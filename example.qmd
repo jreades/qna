@@ -2,7 +2,8 @@
 title: "Q&A Example"
 format:
    html: default
-   #pdf: default
+   pdf:  default
+   ipynb: default
 filters:
   - qna
   - quarto
@@ -14,12 +15,6 @@ This filter changes the output from a panel depending on the output format:
 - Rendering to `.pdf` you will see the answer.
 - Rendering to `.html` you will see both.
 
-::: {.test}
-
-Test content
-
-:::
-
 ### Option 1
 
 ::: {.qna}
@@ -29,36 +24,19 @@ Test content
 How do you print out the last element of this list?
 
 ```python
+
 l = range(1,5)
 print(l[???])
+
 ```
-
-And [a link](https://jreades.github.io/). 
-
-Or an ordered list:
-
-1. Item 1
-2. Item 2
-3. Item 3
 
 #### Answer
 
-Some *other* formatting:
-
-- Such
-- as
-- a 
-- list
-
-##### Sub-headers are supported
-
 ```{python}
+
 l = range(1,5)
 print(l[-1])
+
 ```
-
-<div style="font-weight:bold;">So it's about using negative indexing.</div>
-
-**Or something.**
 
 :::
