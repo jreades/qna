@@ -15,9 +15,7 @@ This filter changes the output from a panel depending on the output format:
 - Rendering to `.pdf` you will see the answer.
 - Rendering to `.html` you will see both.
 
-### Option 1
-
-::: {.qna}
+:::: {.qna}
 
 #### Question
 
@@ -39,4 +37,4 @@ print(l[-1])
 
 ```
 
-:::
+::::
