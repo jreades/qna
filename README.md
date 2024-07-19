@@ -44,6 +44,14 @@ print(f"Last element is: {l[-1]}")
 ```
 
 ::::
+
+And your answer should produce:
+
+```{python}
+#| echo: false
+#| output: asis
+print(f"Last element is: {l[-1]}")
+```
 ````
 
 You can then:
