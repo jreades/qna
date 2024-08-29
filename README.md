@@ -63,3 +63,15 @@ You can then:
 
 Here is the source code for a minimal example: [example.qmd](example.qmd).
 
+Alternatively, you can now use the project or folder-level metadata to change the defaults:
+
+```yaml
+qna:
+  html: answer
+  pdf: question
+  ipynb: both
+```
+
+This would then apply to everything rendered in the project (`_quarto.yml`), profile (`_quarto-<profile>.yml`), or sub-folder (`_metadata.yml`).
+```
+
